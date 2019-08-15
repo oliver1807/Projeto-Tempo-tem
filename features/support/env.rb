@@ -4,6 +4,8 @@ require 'rspec'
 require 'selenium-webdriver'
 require 'site_prism'
 require 'pry'
+require 'faker'
+
 
 
 CONFIG = YAML.load_file("./features/support/config/url.yml")
@@ -22,5 +24,6 @@ Before do |scenario|
 
     @login_page = LoginPage.new
     @fourdevs_page = FourdevsPage.new
+    @cadastro_page = CadastroPage.new
 
 end

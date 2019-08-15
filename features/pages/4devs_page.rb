@@ -9,7 +9,7 @@ class FourdevsPage < SitePrism:: Page
         frdevsn.click
         btnfrdevs.click
         sleep 2
-        $nmcpf=nmcpf.text
+        $nmcpf=nmcpf.text      
     end    
 
 end

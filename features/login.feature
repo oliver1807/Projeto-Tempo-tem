@@ -5,7 +5,7 @@ Funcionalidade: Login no site da Tempo Tem
     Posso informar os dados nos campos de Login
     Para acesso na conta
 
-@Buscar_cpf @login_ok
+@login_ok
 Cenario: Login com sucesso
 
        Dado que acesso o site da tempo tempo
