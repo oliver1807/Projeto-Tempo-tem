@@ -36,7 +36,7 @@ Cenario: Tentativa de acesso com login invalido
     Entao login invalido falha e sistema retorna 'Por favor inisira um endereço de e-mail válido (Ex: exemplo@dominio.com).'
 
 
-@ @fail_login_geral  @login_errado
+@fail_login_geral  @login_errado
 Cenario: Tentativa de acesso com login invalido
 
     Dado que acesso a tela de login

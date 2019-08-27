@@ -3,11 +3,10 @@ Dado("que acesso o site da tempo tempo") do
 end
   
   Quando("informo os dados de login e senha") do
-    $login_t = 'tstprod01@bol.com.br'
+    $login_t = 'ter_luciano.oliveira@tempoassist.com.br'
     $senha_t = 'senha@123'
     @login_page.fazer_login
-    @login_page.clicar_login
-    puts $nmcpf
+    @login_page.clicar_login    
 end
   
   Então("acesso a minha conta com sucesso") do

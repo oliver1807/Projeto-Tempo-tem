@@ -47,12 +47,11 @@ Quando("preencho o login com dado valido e preencho a senha errada") do
   $login_t = 'tstprod01@bol.com.br'
   $senha_t = 'senha555'
   @login_page.fazer_login
-  @login_page.clicar_login
+  @login_page.clicar_login  
 end
 
 Entao("login errado falha e sistema retorna {string}") do |string|
-  msg_er4 = 'O login da conta estava incorreto ou sua conta está desativada temporariamente. Por favor, espere e tente novamente mais tarde.'
-  @login_page.clicar_login
+  msg_er4 = 'O login da conta estava incorreto ou sua conta está desativada temporariamente. Por favor, espere e tente novamente mais tarde.'    
   @login_page.validar_msgError1
   expect(msg_er4). to eql $msg_acessOf
 end

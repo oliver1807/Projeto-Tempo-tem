@@ -25,5 +25,6 @@ Before do |scenario|
     @login_page = LoginPage.new
     @fourdevs_page = FourdevsPage.new
     @cadastro_page = CadastroPage.new
+    @alterar_page = AlterarPage.new
 
 end
