@@ -11,5 +11,7 @@ Dado("que acesso o site da tempo tem") do
   end
   
   Então("cadastro a minha conta com sucesso") do
+    val_cad = "batata"
     @cadastro_page.finalizar_cadastro
+    expect(val_cad).to have_content $msg_sucess        
   end

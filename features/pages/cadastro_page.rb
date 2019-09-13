@@ -9,6 +9,7 @@ class CadastroPage < SitePrism::Page
     element :cp_senha, 'div[class=control]>input[id=password]'
     element :cp_confSenha, 'div[class=control]>input[id=password-confirmation]'
     element :btn_confCad, 'div[class=primary]>button[class*=action]'
+    element :msg_sucess, 'div[class*=message-success]'
 
 
 
@@ -31,7 +32,7 @@ class CadastroPage < SitePrism::Page
 
     def finalizar_cadastro
         btn_confCad.click
-        sleep 5
+        $msg_sucess = msg_sucess.text        
     end
 
 

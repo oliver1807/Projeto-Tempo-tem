@@ -2,8 +2,8 @@ Dado("que acesso o site da tempo tempo") do
     @login_page.load
 end
   
+$login_t = 'ter_luciano.oliveira@tempoassist.com.br'
   Quando("informo os dados de login e senha") do
-    $login_t = 'ter_luciano.oliveira@tempoassist.com.br'
     $senha_t = 'senha@123'
     @login_page.fazer_login
     @login_page.clicar_login    

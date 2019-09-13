@@ -1,0 +1,4 @@
+---
+  dev: ENV_TYPE=dev
+  dev_toolbox: ENV_TYPE=dev_toolbox
+  hml: ENV_TYPE=hml
