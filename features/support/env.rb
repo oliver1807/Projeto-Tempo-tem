@@ -8,19 +8,19 @@ require 'faker'
 
 
 
-CONFIG YAML.load_file("./features/support/config/url.yml")
+CONFIG = YAML.load_file("./features/support/config/url.yml")
 
  Before do |scenario|   
     Capybara.configure do |config|
-        config.default_driver = @driver
+        config.default_driver = :selenium
         config.app_host = CONFIG["url_login"]
-        config.app_host = CONFIG["url_4devs"]
-        Capybara.default_max_wait_time=10
+        config.app_host = CONFIG["url_4devs"]        
     end
 
-   
+ 
 
     Capybara.page.driver.browser.manage.window.maximize
+    Capybara.default_max_wait_time=10
         
 
     @login_page = LoginPage.new
@@ -29,4 +29,3 @@ CONFIG YAML.load_file("./features/support/config/url.yml")
     @alterar_page = AlterarPage.new
 
 end
-
