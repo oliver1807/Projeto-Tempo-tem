@@ -12,7 +12,7 @@ CONFIG = YAML.load_file("./features/support/config/url.yml")
 
  Before do |scenario|   
     Capybara.configure do |config|
-        config.default_driver = :selenium
+        config.default_driver = :selenium_chrome
         config.app_host = CONFIG["url_login"]
         config.app_host = CONFIG["url_4devs"]        
     end

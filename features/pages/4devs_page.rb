@@ -5,6 +5,7 @@ class FourdevsPage < SitePrism:: Page
     element :btnfrdevs, '#bt_gerar_cpf'
     element :nmcpf, 'div[id="texto_cpf"]'
 
+
     def gerar_cpf        
         frdevsn.click
         btnfrdevs.click

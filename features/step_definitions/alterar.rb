@@ -8,9 +8,18 @@ Dado("que estou na area logada") do
   end
   
   Quando("altero o sobrenome") do
-    pending # Write code here that turns the phrase above into concrete actions
+    @alterar_page.alt_sNome
+    @alterar_page.conf_cad
   end
   
   Então("alteração é realizada com sucesso") do
-    pending # Write code here that turns the phrase above into concrete actions
+    @alterar_page.aces_mConta
+    @alterar_page.val_alt
+    sleep 3
+    
+    puts $sobrenome_alt
+    puts @sobrenome
+
+    
+    
   end
