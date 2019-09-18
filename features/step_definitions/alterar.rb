@@ -13,13 +13,6 @@ Dado("que estou na area logada") do
   end
   
   Então("alteração é realizada com sucesso") do
-    @alterar_page.aces_mConta
     @alterar_page.val_alt
-    sleep 3
-    
-    puts $sobrenome_alt
-    puts @sobrenome
-
-    
-    
+    expect($validar_sobrenome).to have_content($sobrenome_alt)
   end

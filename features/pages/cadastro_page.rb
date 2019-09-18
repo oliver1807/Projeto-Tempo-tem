@@ -31,8 +31,7 @@ class CadastroPage < SitePrism::Page
     end
 
     def finalizar_cadastro
-        btn_confCad.click
-        $msg_sucess = msg_sucess.text        
+        btn_confCad.click        
     end
 
 

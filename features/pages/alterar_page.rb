@@ -4,7 +4,8 @@ class AlterarPage < SitePrism::Page
     element :dado_login, 'div[class*=box-information]'
     element :lk_acesConta, 'li[class="nav item"]>a[href*="account/edit"]'
     element :sobrenome, 'div>input[id=lastname]'
-    element :btn_saveCad, 'button[title="Salvar"]'    
+    element :btn_saveCad, 'button[title="Salvar"]'  
+    element :nm_alterado, :xpath,'//*[@id="maincontent"]/div[3]/div[1]/div[3]/div[2]/div[1]/div[1]/p'  
 
 
     def validar_areaLogin
@@ -25,8 +26,8 @@ class AlterarPage < SitePrism::Page
         btn_saveCad.click        
     end
 
-    def val_alt        
-        expect($sobrenome_alt).to eql sobrenome
+    def val_alt                
+        $validar_sobrenome=nm_alterado.text
     end
 
 end

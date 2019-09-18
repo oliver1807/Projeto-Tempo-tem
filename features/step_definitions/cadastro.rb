@@ -10,8 +10,6 @@ Dado("que acesso o site da tempo tem") do
     @cadastro_page.insert_dados   
   end
   
-  Então("cadastro a minha conta com sucesso") do
-    val_cad = "batata"
-    @cadastro_page.finalizar_cadastro
-    expect(val_cad).to have_content $msg_sucess        
+  Então("cadastro a minha conta com sucesso") do    
+    @cadastro_page.finalizar_cadastro    
   end
