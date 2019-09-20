@@ -13,25 +13,27 @@ class CompraPage < SitePrism::Page
         btn_selDom.click
         link_chave.click
         serv_chave.click        
-        btn_queroAgora.click
-        btn_addCar.click                
+        btn_queroAgora.click        
+        btn_addCar.click
         pg_1.click
     end
 
     def inf_cartao
         sel_pgCard.click
-        puts $cartao[:comprador]
         set_nomeCard.set($cartao[:comprador])
-        
-        page.within_frame('.js-iframe') do
-            cp_numCartao.set($cartao[:numero])
-        end
-        binding.pry
-
-
 
     end
 
+    def abrir_iframe
+        begin
+            within_frame(:xpath,'//*[@id="cardContainer"]/div/div[2]/div[2]/div[1]/label/span[2]/span/iframe', :wait => 5) do                        
+                cp_numCartao.set($cartao[:numero])
+                binding.pry
+            sleep 5
+            end
+        
+        end
+    end
 
 
 end
